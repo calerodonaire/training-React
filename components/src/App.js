@@ -1,12 +1,13 @@
-import './App.css';
-import Title from "./components/Title";
-import Paragraph from "./components/Paragraph";
-function App() {
+import "./App.css";
+import Welcome from "./components/Welcome";
+
+function App(props) {
+  const today = new Date(Date.now()).toLocaleDateString();
   return (
     <div className="main">
-      <Title></Title>
-      <Paragraph></Paragraph>
-      <Paragraph></Paragraph>
+      <Welcome userName="Jane" today={today}></Welcome>
+      <Welcome userName="David" today={today}></Welcome>
+      <Welcome userName="World" today={today}></Welcome>
     </div>
   );
 }
