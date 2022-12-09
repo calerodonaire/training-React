@@ -1,0 +1,12 @@
+.outer-card {
+  width: 100%;
+  background-color: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 0.3rem;
+  padding: 3.5em 0.8em 2em;
+  margin-bottom: 2em;
+  transition: all 0.5s;
+}
+.outer-card:hover {
+  box-shadow: 0px 4px 19.98px 7.02px rgba(0, 0, 0, 0.17);
+}
