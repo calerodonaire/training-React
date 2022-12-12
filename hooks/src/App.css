@@ -1,9 +1,30 @@
-button {
-    padding: .5em;
-    border-radius: 1.5em;
-    background-color: beige;
-    color: black;
-    margin-left: 1.5em;
-    margin-bottom: 1.5em;
-  }
-  
+h3 {
+  transition: all 3s cubic-bezier(1, -0.01, 0, 0.99);
+}
+h3 span {
+  display: inline-block;
+  margin: 1em 0;
+  padding: 0.3em 0.5em;
+  background-color: blue;
+  border: 1px solid darkgray;
+  border-radius: 0.5rem;
+  font-size: 5rem;
+}
+
+.yellow {
+  background-color: yellow;
+}
+.red {
+  background-color: red;
+}
+.move {
+  transform: translateY(-500px);
+}
+.pane {
+  display: inline-block;
+  border: 3px solid darkgrey;
+  border-radius: 0.5rem;
+  padding: 0.3em 0.5em;
+  color: white;
+  font-style: italic;
+}

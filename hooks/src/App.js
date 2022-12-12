@@ -1,35 +1,36 @@
 import "./App.css";
-import { useState } from "react";
-// import Person from "./components/Person";
-import Counter from "./components/Counter";
+import { useState, useEffect } from "react";
+
 function App() {
-  const [count, setCount] = useState(0);
-  const handlePlusOne = () => {
-    setCount(count + 1);
-  };
-  const handleTimesFive = () => {
-    setCount(count * 5);
-  };
-  const handleMinusOne = () => {
-    setCount(count - 1);
-  };
-  const handleDivideByHundred = () => {
-    if (count !== 0) {
-      setCount(count / 100);
+  const [count, setCount] = useState(10);
+  const [running, setRunning] = useState(false);
+
+  useEffect(() => {
+    if (count > 0) {
+      setTimeout(() => {
+        setCount(count - 1);
+      }, 1000);
     } else {
-      console.log("División de 0 no es posible");
+      setRunning(true);
     }
-  };
+  });
 
   return (
     <div>
-      <Counter count={count} />
-      <button onClick={handlePlusOne}>Pulsame para sumar</button>
-      <button onClick={handleTimesFive}>Pulsame para multiplicar</button>
-      <button onClick={handleMinusOne}>Pulsame para restar</button>
-      <button onClick={handleDivideByHundred}>
-        Pulsame para dividir por 100
-      </button>
+      <h1>Rocket Launching - NASA Mars</h1>
+      <h2>Ignition Sequence Start</h2>
+      {running && (
+        <h3 className="pane red">
+          All engines running. Lift Off! className="pane red"
+        </h3>
+      )}
+      <h3 className={count == 0 && "move"}>
+        <span
+          className={count <= 5 && count >= 3 ? "yellow" : count <= 2 && "red"}
+        >
+          {count}
+        </span>
+      </h3>
     </div>
   );
 }
