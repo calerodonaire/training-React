@@ -7,17 +7,17 @@ import Wrapper from "./wrappers/Wrapper";
 
 function Expenses() {
   return (
-    <Wrapper>
-      {itemsList.map((item) => {
+    <Wrapper
+      content={itemsList.map((item, index) => {
         return (
-          <ItemContainer>
+          <ItemContainer key={index}>
             <ItemIcon icons={item.icons} classes={item.classes} />
             <ItemInfo data={item.data} />
             <ItemCost money={item.money} />
           </ItemContainer>
         );
       })}
-    </Wrapper>
+    />
   );
 }
 
