@@ -35,6 +35,10 @@ export const classes = {
     bgColor: "light-electricity",
     color: "electricity",
   },
+  insurance: {
+    bgColor: "light-insurance",
+    color: "insurance",
+  },
 };
 
 export const itemsList = [

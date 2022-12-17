@@ -12,10 +12,11 @@ function ItemCost(props) {
       unicode: "\u002b",
     },
     minus: {
-      entity: "&#88722",
+      entity: "&#8722",
       unicode: "\u2212",
     },
   };
+
   return (
     <div
       className={`item-cost flex-20 ${
@@ -23,7 +24,7 @@ function ItemCost(props) {
       } fa-3x flex-center`}
     >
       <span>
-        {(props.money.income && sign.plus.unicode) || sign.minus.unicode}$
+        {(props.money.income && sign.plus.unicode) || sign.minus.unicode} $
         {props.money.amount}
       </span>
       <FontAwesomeIcon
